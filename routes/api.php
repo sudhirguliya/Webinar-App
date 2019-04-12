@@ -20,6 +20,6 @@ Route::get('/user', function (Request $request) {
 Route::resource('/students', 'StudentsController', [
     'except' => ['create', 'edit']
 ]);
-Route::resource('/teachers', 'TeacherController', [
+Route::resource('/teachers', 'TeachersController', [
     'except' => ['create', 'edit']
 ]);

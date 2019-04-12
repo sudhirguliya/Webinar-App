@@ -9,6 +9,7 @@ use App\Student;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Storage;
+use Hash;
 
 class StudentsController extends Controller
 {

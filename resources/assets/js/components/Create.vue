@@ -6,9 +6,9 @@
             <crud-form :student="student"></crud-form>
 
             <div class="text-center mrg-top-1em">
-                <button class="btn btn-default" v-link="{ name: 'index' }">
+                <button class="btn btn-default" v-link="{ name: 'list' }">
                     <i class="glyphicon glyphicon-chevron-left"></i>
-                    Back
+                    List
                 </button>
             </div>
         </div>
@@ -24,6 +24,7 @@
                     avatar: '',
                     name: '',
                     email: '',
+                    phone: '',
                     birth_date: '',
                 }
             }
@@ -58,6 +59,7 @@
                     avatar: '',
                     name: '',
                     email: '',
+                    phone: '',
                     birth_date: '',
                 }
             }

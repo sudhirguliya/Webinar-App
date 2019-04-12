@@ -50,6 +50,44 @@
 
                 <div
                     class="form-group"
+                    :class="{ 'has-error': errors['phone'] }">
+                    <label class="control-label" for="phone">
+                        Phone
+                    </label>
+
+                    <input
+                        v-model="student.phone"
+                        type="phone"
+                        class="form-control"
+                        id="phone"
+                        placeholder="Phone...">
+
+                    <span class="help-block" v-for="error of errors['phone']">
+                        {{ error }}
+                    </span>
+                </div>
+
+                <div
+                    class="form-group"
+                    :class="{ 'has-error': errors['password'] }">
+                    <label class="control-label" for="password">
+                        Password
+                    </label>
+
+                    <input
+                        v-model="student.password"
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="Password...">
+
+                    <span class="help-block" v-for="error of errors['password']">
+                        {{ error }}
+                    </span>
+                </div>
+
+                <!-- <div
+                    class="form-group"
                     :class="{ 'has-error': errors['birth_date'] }">
                     <label class="control-label">
                         Birth Date
@@ -66,7 +104,7 @@
                     <span class="help-block" v-for="error of errors['birth_date']">
                         {{ error }}
                     </span>
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -92,9 +130,9 @@
             },
         },
         created() {
-            if(! this.student.birth_date) {
+            /*if(! this.student.birth_date) {
                 this.student.birth_date = moment().format('YYYY-MM-DD')
-            }
+            }*/
         },
         data() {
             return {
@@ -132,7 +170,9 @@
 
                 formData.set('name', this.student.name);
                 formData.set('email', this.student.email);
-                formData.set('birth_date', this.student.birth_date);
+                formData.set('phone', this.student.phone);
+                formData.set('password', this.student.password);
+                //formData.set('birth_date', this.student.birth_date);
 
                 this.$dispatch('submitted', formData);
             }

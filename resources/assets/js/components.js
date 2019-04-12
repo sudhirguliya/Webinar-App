@@ -12,6 +12,7 @@ const Actions = require('./components/Actions.vue');
 const Notify = require('./components/Notify.vue');
 const ImageInput = require('./components/ImageInput.vue');
 const CRUDForm = require('./components/CRUDForm.vue');
+const LoginForm = require('./components/LoginForm.vue');
 
 Vue.component('vuetable', Vuetable);
 Vue.component('vuetable-pagination', VuetablePagination);
@@ -26,4 +27,4 @@ Vue.component('avatar', Avatar);
 Vue.component('actions', Actions);
 Vue.component('notify', Notify);
 Vue.component('image-input', ImageInput);
-Vue.component('crud-form', CRUDForm);
+Vue.component('login-form', LoginForm);

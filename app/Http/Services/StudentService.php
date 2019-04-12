@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use Storage;
+use Hash;
 
 class StudentService
 {
@@ -46,7 +47,11 @@ class StudentService
     {
         $student->name = $request->name;
         $student->email = $request->email;
-        $student->birth_date = $request->birth_date;
+        $student->phone = $request->phone;
+        /*$password = $request->password;
+        $student->password = $hashedPassword = Hash::make($password);
+        echo $hashedPassword;*/
+        //$student->birth_date = $request->birth_date;
         $student->save();
     }
 

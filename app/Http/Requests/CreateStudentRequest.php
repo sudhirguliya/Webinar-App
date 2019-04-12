@@ -27,7 +27,7 @@ class CreateStudentRequest extends FormRequest
             'avatar' => 'image',
             'name' => 'required',
             'email' => 'required|email|unique:students,email',
-            'birth_date' => 'required|date',
+            /*'birth_date' => 'required|date',*/
         ];
     }
 }
